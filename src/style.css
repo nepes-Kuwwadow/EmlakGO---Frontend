@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Select & Option fixes across light & dark mode in all browsers */
+select {
+  color-scheme: light;
+}
+
+select option {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+}
+
+.dark select,
+html.dark select {
+  color-scheme: dark !important;
+}
+
+.dark select option,
+html.dark select option {
+  background-color: #1f2937 !important;
+  color: #f9fafb !important;
+}
